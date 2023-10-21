@@ -36,27 +36,11 @@ public class EcommerceapplicationApplication implements CommandLineRunner {
 		produit3.setPrix(1880);
 		produit3.setQuantite(2);
 		produitRepository.save(produit3);
-		produitRepository.deleteById(produit1.getId());
-		/*List<Produit> prods=produitRepository.findAll();
 		
-		for(int i=0;i<=prods.size()-1;i++)
-		{
-			//System.out.println(prods[i].toString); bad practice
-		}
-		 
-		for (Produit pr : produitRepository.findAll()) {
-			System.out.println(pr.toString());
-		}
-		*/
-		// probléme technique => le chargement en retard
-		
-		// bonne pratique memoire (async function)
-		/*produitRepository.findAll().forEach(pr->{
-			System.out.println(pr.toString());
-		});
-		*/
-		produitRepository.findAll().forEach(System.out::println);
-		
+	}
+	public void showList(List<Produit> produits)
+	{
+		produits.forEach(System.out::println);
 	}
 
 }
