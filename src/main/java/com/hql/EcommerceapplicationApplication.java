@@ -27,7 +27,7 @@ public class EcommerceapplicationApplication implements CommandLineRunner {
 		// TODO Auto-generated method stub
 		Produit pr1=new Produit("toshiba LCD", "ecran LCD toshiba full HD", 1180, 8, null);
 		Produit pr2=new Produit("Dell Insprion", "Dell i5 11G", 4280, 3, "photo");
-		Produit pr3=new Produit("Samsung s20", "S20 avec ecran ", 2080, 13, "oui");
+		Produit pr3=new Produit("Samsung s20", "S20 avec ecran full HD ", 2080, 13, "oui");
 		//ajout
 		Produit produit1=produitRepository.save(pr1);
 		produitRepository.save(pr2);
